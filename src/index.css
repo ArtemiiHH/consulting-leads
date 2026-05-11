@@ -1,34 +1,42 @@
-*, *::before, *::after {
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --bg: #F9F5EE;
-  --bg-subtle: #F2EBE0;
-  --bg-card: #FDFAF6;
-  --bg-dark: #1A150E;
-  --bg-dark-2: #221C13;
-  --accent: #AA6F1A;
-  --accent-hover: #8E5C14;
-  --accent-dim: rgba(170, 111, 26, 0.10);
-  --text-primary: #1A150E;
-  --text-secondary: #5A5048;
-  --text-muted: #9A8C7E;
-  --text-on-dark: #EDE7DC;
-  --text-on-dark-dim: #7A6E60;
-  --border: #DDD0BC;
-  --border-subtle: #EAE0D1;
+  --bg: #f9f5ee;
+  --bg-subtle: #f2ebe0;
+  --bg-card: #fdfaf6;
+  --bg-dark: #1a150e;
+  --bg-dark-2: #221c13;
+  --accent: #aa6f1a;
+  --accent-hover: #8e5c14;
+  --accent-dim: rgba(170, 111, 26, 0.1);
+  --text-primary: #1a150e;
+  --text-secondary: #5a5048;
+  --text-muted: #9a8c7e;
+  --text-on-dark: #ede7dc;
+  --text-on-dark-dim: #7a6e60;
+  --border: #ddd0bc;
+  --border-subtle: #eae0d1;
   --radius-sm: 6px;
   --radius: 10px;
   --radius-lg: 16px;
-  --shadow-sm: 0 1px 2px rgba(26, 21, 14, 0.05), 0 1px 4px rgba(26, 21, 14, 0.04);
-  --shadow: 0 2px 8px rgba(26, 21, 14, 0.07), 0 1px 3px rgba(26, 21, 14, 0.04);
-  --shadow-md: 0 6px 24px rgba(26, 21, 14, 0.09), 0 2px 8px rgba(26, 21, 14, 0.05);
-  --shadow-lg: 0 16px 48px rgba(26, 21, 14, 0.12), 0 4px 16px rgba(26, 21, 14, 0.06);
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --shadow-sm:
+    0 1px 2px rgba(26, 21, 14, 0.05), 0 1px 4px rgba(26, 21, 14, 0.04);
+  --shadow: 0 2px 8px rgba(65, 61, 55, 0.07), 0 1px 3px rgba(26, 21, 14, 0.04);
+  --shadow-md:
+    0 6px 24px rgba(26, 21, 14, 0.09), 0 2px 8px rgba(26, 21, 14, 0.05);
+  --shadow-lg:
+    0 16px 48px rgba(26, 21, 14, 0.12), 0 4px 16px rgba(26, 21, 14, 0.06);
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --max-width: 1200px;
 }
 
@@ -51,7 +59,10 @@ a {
   text-decoration: none;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: var(--font-sans);
 }
 

@@ -12,10 +12,10 @@ export default function Hero() {
         <p className={styles.eyebrow}>Weekly lead delivery for consulting firms</p>
 
         <h1 className={styles.headline}>
-          Verified{' '}
-          <em className={styles.accent}>consulting leads,</em>
+          Weekly{' '}
+          <em className={styles.accent}>lead delivery</em>
           <br />
-          delivered every week.
+          for consulting firms.
         </h1>
 
         <p className={styles.subtext}>
