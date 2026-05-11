@@ -5,7 +5,7 @@
 }
 
 .header {
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 .label {
@@ -32,10 +32,89 @@
   color: var(--accent);
 }
 
+.titleRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
 .subtitle {
   font-size: 16px;
   color: var(--text-secondary);
   max-width: 440px;
+}
+
+/* Billing toggle */
+
+.toggleWrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+  width: 220px;
+  isolation: isolate;
+}
+
+.toggleSlider {
+  position: absolute;
+  inset: 4px;
+  width: calc(50% - 4px);
+  background: var(--text-primary);
+  border-radius: 5px;
+  transition: transform 0.22s cubic-bezier(0.34, 1.2, 0.64, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.toggleOption {
+  position: relative;
+  z-index: 1;
+  background: none;
+  border: none;
+  padding: 7px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s;
+  text-align: center;
+}
+
+.toggleActive {
+  color: var(--bg);
+}
+
+.saveBadge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2D7A3A;
+  background: rgba(45, 122, 58, 0.10);
+  border: 1px solid rgba(45, 122, 58, 0.20);
+  padding: 4px 10px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+.saveBadgeVisible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .grid {
@@ -91,6 +170,12 @@
   letter-spacing: -0.01em;
 }
 
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .priceRow {
   display: flex;
   align-items: baseline;
@@ -104,11 +189,18 @@
   color: var(--text-primary);
   letter-spacing: -0.03em;
   line-height: 1;
+  transition: opacity 0.15s;
 }
 
 .period {
   font-size: 15px;
   color: var(--text-muted);
+}
+
+.billingNote {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
 }
 
 .summary {
@@ -186,6 +278,11 @@
 }
 
 @media (max-width: 900px) {
+  .titleRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     max-width: 480px;
