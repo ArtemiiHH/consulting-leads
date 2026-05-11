@@ -1,0 +1,141 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(249, 245, 238, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s;
+}
+
+.scrolled {
+  border-bottom-color: var(--border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  gap: 0;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-right: 36px;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  transition: color 0.15s;
+}
+
+.nav a:hover {
+  color: var(--text-primary);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 18px;
+  background: var(--text-primary);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.015em;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: #2E2518;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 4px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.menuIcon {
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  gap: 4px;
+}
+
+.mobileMenu a {
+  display: block;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobileMenu a:last-child {
+  border-bottom: none;
+}
+
+.mobileCta {
+  margin-top: 8px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px !important;
+  background: var(--text-primary);
+  color: var(--bg) !important;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+}
