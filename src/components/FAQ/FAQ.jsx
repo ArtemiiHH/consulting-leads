@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     q: 'How does delivery work?',
-    a: 'Each Friday, you receive an email from delivery@curata.io containing a secure, signed download link to your lead file. Links are time-limited for security. There are no email attachments — just a clean link to your file.',
+    a: 'Each Friday, you receive an email from delivery@leadinbox.io containing a secure, signed download link to your lead file. Links are time-limited for security. There are no email attachments — just a clean link to your file.',
   },
   {
     q: 'Is there a dashboard or web portal?',
-    a: 'Not in the current version. Curata is intentionally simple at this stage: set preferences once by email after signup, then receive your leads every Friday. A self-service web portal is planned for a future release.',
+    a: 'Not in the current version. LeadInbox is intentionally simple at this stage: set preferences once by email after signup, then receive your leads every Friday. A self-service web portal is planned for a future release.',
   },
   {
     q: 'Which regions are supported at launch?',
@@ -45,8 +45,8 @@ export default function FAQ() {
             </h2>
             <p className={styles.hint}>
               More questions? Email us at{' '}
-              <a href="mailto:hello@curata.io" className={styles.emailLink}>
-                hello@curata.io
+              <a href="mailto:hello@leadinbox.io" className={styles.emailLink}>
+                hello@leadinbox.io
               </a>
             </p>
           </div>

@@ -15,11 +15,11 @@ export default function FinalCTA() {
         </p>
         <div className={styles.actions}>
           <a href="#pricing" className={styles.primaryBtn}>Request Access</a>
-          <a href="mailto:hello@curata.io" className={styles.secondaryBtn}>
+          <a href="mailto:hello@leadinbox.io" className={styles.secondaryBtn}>
             Talk to us first
           </a>
         </div>
-        <p className={styles.note}>No long-term contracts. Cancel any time.</p>
+        {/* <p className={styles.note}>No long-term contracts. Cancel any time.</p> */}
       </div>
     </section>
   )

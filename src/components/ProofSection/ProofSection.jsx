@@ -7,7 +7,7 @@ const switchReasons = [
   },
   {
     heading: 'Data quality is the bottleneck',
-    body: 'Bounced emails and stale titles kill outreach campaigns before they start. Curata targets a sub-2% bounce rate through multi-step email verification before every delivery.',
+    body: 'Bounced emails and stale titles kill outreach campaigns before they start. LeadInbox targets a sub-2% bounce rate through multi-step email verification before every delivery.',
   },
   {
     heading: 'Setup once, receive weekly',
@@ -22,7 +22,7 @@ export default function ProofSection() {
         <div className={styles.quoteBlock}>
           <span className={styles.quoteMarks}>&ldquo;</span>
           <blockquote className={styles.quote}>
-            Before Curata, our team spent the first two days of every week
+            Before LeadInbox, our team spent the first two days of every week
             building prospect lists from scratch — LinkedIn, company databases,
             manual verification. Now we receive a clean, formatted file every
             Friday morning and start calls by Monday. The quality is

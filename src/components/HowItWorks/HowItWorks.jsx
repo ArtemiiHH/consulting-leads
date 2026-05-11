@@ -1,10 +1,10 @@
-import styles from './HowItWorks.module.css'
+import styles from "./HowItWorks.module.css";
 
 const steps = [
   {
-    number: '01',
-    title: 'Select your consulting niche',
-    body: 'Choose from eight consulting categories: IT, HR, Finance, Legal, Operations, Strategy, Cybersecurity, or ESG. You can cover up to three categories on Growth plans.',
+    number: "01",
+    title: "Select your consulting niche",
+    body: "Choose from eight consulting categories: IT, HR, Finance, Legal, Operations, Strategy, Cybersecurity, or ESG. You can cover up to three categories on Growth plans.",
     visual: (
       <div className={styles.visualPills}>
         <span className={styles.pillActive}>Finance &amp; Accounting</span>
@@ -15,9 +15,9 @@ const steps = [
     ),
   },
   {
-    number: '02',
-    title: 'Set geography and company size',
-    body: 'Filter by country, region, or city depending on your plan. Set a company size range to focus on SMBs, mid-market, or enterprise accounts.',
+    number: "02",
+    title: "Set geography and company size",
+    body: "Filter by country, region, or city depending on your plan. Set a company size range to focus on SMBs, mid-market, or enterprise accounts.",
     visual: (
       <div className={styles.visualFilters}>
         <div className={styles.filterRow}>
@@ -36,25 +36,30 @@ const steps = [
     ),
   },
   {
-    number: '03',
-    title: 'Receive your weekly lead file',
-    body: 'Every Friday, a secure download link arrives in your inbox. No attachments, no dashboard login required — just click and download.',
+    number: "03",
+    title: "Receive your weekly lead file",
+    body: "Every Friday, a secure download link arrives in your inbox. No attachments, no dashboard login required — just click and download.",
     visual: (
       <div className={styles.visualEmail}>
         <div className={styles.emailHeader}>
-          <span className={styles.emailFrom}>From: delivery@curata.io</span>
+          <span className={styles.emailFrom}>From: delivery@leadinbox.io</span>
           <span className={styles.emailBadge}>New</span>
         </div>
-        <p className={styles.emailSubject}>Your weekly leads are ready · Finance &amp; Accounting · UK</p>
-        <p className={styles.emailBody}>47 verified contacts for Week 19, 2026. Download your file using the secure link below.</p>
+        <p className={styles.emailSubject}>
+          Your weekly leads are ready · Finance &amp; Accounting · UK
+        </p>
+        <p className={styles.emailBody}>
+          47 verified contacts for Week 19, 2026. Download your file using the
+          secure link below.
+        </p>
         <span className={styles.emailCta}>Download Lead File →</span>
       </div>
     ),
   },
   {
-    number: '04',
-    title: 'Start outreach with clean data',
-    body: 'Each lead includes name, title, company, and a verified email at minimum. Higher tiers include LinkedIn URL, phone, company size, and recent trigger events.',
+    number: "04",
+    title: "Start outreach with clean data",
+    body: "Each lead includes name, title, company, and a verified email at minimum. Higher tiers include LinkedIn URL, phone, company size, and recent trigger events.",
     visual: (
       <div className={styles.visualFormats}>
         <div className={styles.formatCard}>
@@ -75,7 +80,7 @@ const steps = [
       </div>
     ),
   },
-]
+];
 
 export default function HowItWorks() {
   return (
@@ -90,7 +95,7 @@ export default function HowItWorks() {
         </div>
 
         <div className={styles.steps}>
-          {steps.map(step => (
+          {steps.map((step) => (
             <div key={step.number} className={styles.step}>
               <div className={styles.stepLeft}>
                 <span className={styles.stepNum}>{step.number}</span>
@@ -99,13 +104,11 @@ export default function HowItWorks() {
                   <p className={styles.stepBody}>{step.body}</p>
                 </div>
               </div>
-              <div className={styles.stepRight}>
-                {step.visual}
-              </div>
+              <div className={styles.stepRight}>{step.visual}</div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
