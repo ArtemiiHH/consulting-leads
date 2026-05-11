@@ -389,3 +389,35 @@ Example file delivery card copy:
 ## Deliverable
 
 Produce a landing page that feels like a premium vertical SaaS homepage for consulting lead delivery, using the product details from the product brief and the visual language of the attached reference.
+
+## Tech Stack
+
+Use React for the frontend and Node.js for the backend.
+
+## Setup Requirements
+
+- Initialize a package.json if one does not exist.
+- Install only the dependencies needed for the landing page.
+- Prefer a minimal dependency set.
+- Do not introduce a new framework unless necessary.
+
+## Allowed Dependencies
+
+Frontend:
+
+- react
+- react-dom
+- vite
+
+Backend:
+
+- node
+- express
+
+Styling:
+
+- CSS modules
+
+## Output
+
+Create the app, install dependencies, and provide the exact commands to run it locally.
