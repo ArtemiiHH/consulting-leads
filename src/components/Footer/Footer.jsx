@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <a href="#" className={styles.logo}>Curata</a>
+          <a href="#" className={styles.logo}>LeadInBox</a>
           <p className={styles.tagline}>
             Weekly verified lead delivery<br />for consulting firms.
           </p>
@@ -34,7 +34,7 @@ export default function Footer() {
 
       <div className={`container ${styles.bottom}`}>
         <p className={styles.copy}>
-          © {new Date().getFullYear()} Curata. All rights reserved.
+          © {new Date().getFullYear()} LeadInBox. All rights reserved.
         </p>
         <p className={styles.bottomLinks}>
           <a href="#">Privacy</a>
