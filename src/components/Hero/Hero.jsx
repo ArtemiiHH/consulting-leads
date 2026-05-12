@@ -13,17 +13,16 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-        <p className={styles.eyebrow}>Get consulting leads every week</p>
 
         <h1 className={styles.headline}>
-          Weekly <em className={styles.accent}>lead delivery</em>
+          Weekly <em className={styles.accent}>list of leads</em>
           <br />
           for consulting firms.
         </h1>
 
         <p className={styles.subtext}>
-          Set your targeting once and receive verified consulting leads every
-          week.
+          50 hand-picked, high quality - consulting leads every
+          Monday.
         </p>
 
         <div className={styles.actions}>

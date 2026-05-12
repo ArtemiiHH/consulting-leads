@@ -30,7 +30,7 @@ const steps = [
         </div>
         <div className={styles.filterRow}>
           <span className={styles.filterLabel}>Delivery</span>
-          <span className={styles.filterValue}>Every Friday</span>
+          <span className={styles.filterValue}>Every Monday</span>
         </div>
       </div>
     ),
@@ -38,7 +38,7 @@ const steps = [
   {
     number: "03",
     title: "Receive your weekly lead file",
-    body: "Every Friday, a secure download link arrives in your inbox. No attachments, no dashboard login required — just click and download.",
+    body: "Every Monday, a secure download link arrives in your inbox. No attachments, no dashboard login required — just click and download.",
     visual: (
       <div className={styles.visualEmail}>
         <div className={styles.emailHeader}>

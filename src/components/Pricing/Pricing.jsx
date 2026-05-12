@@ -1,7 +1,7 @@
 import styles from './Pricing.module.css'
 
 const features = [
-  '75 verified leads per week',
+  '50 verified leads per week',
   '3 consulting categories',
   'Country + region filter',
   'CSV + Excel export',
@@ -14,14 +14,14 @@ const features = [
 const plans = [
   {
     name: 'Monthly',
-    price: 149,
+    price: 199,
     billing: 'Billed monthly',
     summary: 'Full access, billed month to month. Cancel any time.',
   },
   {
     name: 'Annual',
-    price: 124,
-    billing: 'Billed $1,488/year — save $300',
+    price: 159,
+    billing: 'Billed $1,908/year — save $480',
     summary: 'Same full access at a lower rate. Best value for ongoing outbound.',
     recommended: true,
   },

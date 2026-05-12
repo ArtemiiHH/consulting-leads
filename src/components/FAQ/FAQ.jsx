@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     q: 'How does delivery work?',
-    a: 'Each Friday, you receive an email from delivery@leadinbox.io containing a secure, signed download link to your lead file. Links are time-limited for security. There are no email attachments — just a clean link to your file.',
+    a: 'Each Monday, you receive an email from delivery@leadinbox.io containing a secure, signed download link to your lead file. Links are time-limited for security. There are no email attachments — just a clean link to your file.',
   },
   {
     q: 'Is there a dashboard or web portal?',
-    a: 'Not in the current version. LeadInbox is intentionally simple at this stage: set preferences once by email after signup, then receive your leads every Friday. A self-service web portal is planned for a future release.',
+    a: 'Not in the current version. LeadInbox is intentionally simple at this stage: set preferences once by email after signup, then receive your leads every Monday. A self-service web portal is planned for a future release.',
   },
   {
     q: 'Which regions are supported at launch?',

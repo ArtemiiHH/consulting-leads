@@ -65,7 +65,7 @@ export default function ProductOverview() {
               </h2>
             </div>
             <p className={styles.desc}>
-              Every Friday, you receive a clean file of verified companies and
+              Every Monday, you receive a clean file of verified companies and
               decision-makers matching your exact preferences — no manual
               searching, no unverified contacts.
             </p>
