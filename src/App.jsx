@@ -69,9 +69,9 @@ export default function App() {
       <main>
         <Hero />
         <ProductOverview />
+        <Pricing onCheckout={handleCheckout} />
         <HowItWorks />
         <Categories />
-        <Pricing onCheckout={handleCheckout} />
         <FAQ />
         <FinalCTA onCheckout={handleCheckout} />
       </main>

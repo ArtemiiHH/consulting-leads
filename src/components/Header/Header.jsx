@@ -20,8 +20,8 @@ export default function Header() {
 
         <nav className={styles.nav}>
           <a href="#product">Product</a>
-          <a href="#how-it-works">How it works</a>
           <a href="#pricing">Pricing</a>
+          <a href="#how-it-works">How it works</a>
           <a href="#faq">FAQ</a>
         </nav>
 
