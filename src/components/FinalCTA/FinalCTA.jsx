@@ -1,6 +1,6 @@
 import styles from './FinalCTA.module.css'
 
-export default function FinalCTA() {
+export default function FinalCTA({ onCheckout }) {
   return (
     <section className={styles.section}>
       <div className={`container ${styles.inner}`}>
@@ -14,7 +14,9 @@ export default function FinalCTA() {
           Receive your first verified lead file by the end of the week.
         </p>
         <div className={styles.actions}>
-          <a href="#pricing" className={styles.primaryBtn}>Request Access</a>
+          <button type="button" className={styles.primaryBtn} onClick={() => onCheckout?.()}>
+            Request Access
+          </button>
           <a href="mailto:hello@leadinbox.io" className={styles.secondaryBtn}>
             Talk to us first
           </a>

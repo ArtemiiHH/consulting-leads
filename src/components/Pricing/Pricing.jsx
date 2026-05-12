@@ -53,7 +53,7 @@ const plans = [
   },
 ]
 
-export default function Pricing() {
+export default function Pricing({ onCheckout }) {
   const [isAnnual, setIsAnnual] = useState(true)
 
   return (
@@ -124,9 +124,13 @@ export default function Pricing() {
                   <p className={styles.summary}>{plan.summary}</p>
                 </div>
 
-                <a href="#" className={`${styles.cta} ${plan.recommended ? styles.ctaPrimary : styles.ctaSecondary}`}>
+                <button
+                  type="button"
+                  className={`${styles.cta} ${plan.recommended ? styles.ctaPrimary : styles.ctaSecondary}`}
+                  onClick={() => onCheckout?.(plan.name)}
+                >
                   Request Access
-                </a>
+                </button>
 
                 <ul className={styles.featureList}>
                   {plan.features.map(f => (

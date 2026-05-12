@@ -218,6 +218,7 @@
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.01em;
+  cursor: pointer;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
