@@ -17,16 +17,24 @@ const PLAN_AMOUNTS = {
 
 app.use(express.json())
 
-app.post('/api/create-payment-intent', async (req, res) => {
-  const { plan } = req.body
+app.post('/api/create-checkout-session', async (req, res) => {
+  const { plan, origin } = req.body
   const amount = PLAN_AMOUNTS[plan] ?? PLAN_AMOUNTS.Monthly
   try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount,
-      currency: 'usd',
-      automatic_payment_methods: { enabled: true, allow_redirects: 'never' },
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      line_items: [{
+        price_data: {
+          currency: 'usd',
+          unit_amount: amount,
+          product_data: { name: `LeadInbox ${plan} Plan` },
+        },
+        quantity: 1,
+      }],
+      success_url: `${origin}?checkout=success&plan=${plan}`,
+      cancel_url: `${origin}?checkout=cancelled`,
     })
-    res.json({ clientSecret: paymentIntent.client_secret })
+    res.json({ url: session.url })
   } catch (err) {
     res.status(500).json({ error: err.message })
   }
