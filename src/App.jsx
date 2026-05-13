@@ -13,16 +13,17 @@ import FormPage from "./pages/FormPage/FormPage";
 import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 
 function getInitialState() {
-  const params = new URLSearchParams(window.location.search)
-  const checkout = params.get('checkout')
-  const plan = params.get('plan')
-  if (checkout || plan) window.history.replaceState({}, '', window.location.pathname)
-  if (checkout === 'success' && plan) return { page: 'form', plan }
-  return { page: 'home', plan: null }
+  const params = new URLSearchParams(window.location.search);
+  const checkout = params.get("checkout");
+  const plan = params.get("plan");
+  if (checkout || plan)
+    window.history.replaceState({}, "", window.location.pathname);
+  if (checkout === "success" && plan) return { page: "form", plan };
+  return { page: "home", plan: null };
 }
 
 export default function App() {
-  const init = getInitialState()
+  const init = getInitialState();
   const [page, setPage] = useState(init.page);
   const [selectedPlan, setSelectedPlan] = useState(init.plan);
   const [submittedData, setSubmittedData] = useState(null);
@@ -30,11 +31,6 @@ export default function App() {
   function handleCheckout(planName) {
     setSelectedPlan(planName);
     setPage("payment");
-    window.scrollTo(0, 0);
-  }
-
-  function handlePaymentSuccess() {
-    setPage("form");
     window.scrollTo(0, 0);
   }
 
@@ -50,13 +46,7 @@ export default function App() {
   }
 
   if (page === "payment") {
-    return (
-      <PaymentPage
-        plan={selectedPlan}
-        onSuccess={handlePaymentSuccess}
-        onBack={handleBack}
-      />
-    );
+    return <PaymentPage plan={selectedPlan} onBack={handleBack} />;
   }
 
   if (page === "form") {
