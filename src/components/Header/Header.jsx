@@ -25,7 +25,7 @@ export default function Header() {
         </nav>
 
         <a href="#pricing" className={styles.cta}>
-          Request Access
+          Start Getting Leads
         </a>
 
         <button

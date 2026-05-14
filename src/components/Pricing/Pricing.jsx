@@ -73,7 +73,7 @@ export default function Pricing({ onCheckout }) {
                 className={`${styles.cta} ${plan.recommended ? styles.ctaPrimary : styles.ctaSecondary}`}
                 onClick={() => onCheckout?.(plan.name)}
               >
-                Request Access
+                Claim This Week's Leads
               </button>
 
               <ul className={styles.featureList}>

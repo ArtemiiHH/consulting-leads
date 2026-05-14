@@ -1,15 +1,47 @@
-import styles from './Categories.module.css'
+import styles from "./Categories.module.css";
 
 const categories = [
-  { num: '01', name: 'IT & Digital Transformation', desc: 'For firms advising on technology adoption, infrastructure, and digital strategy.' },
-  { num: '02', name: 'HR & Talent Consulting', desc: 'For firms handling workforce planning, recruitment, and organisational development.' },
-  { num: '03', name: 'Finance & Accounting', desc: 'For firms supporting CFOs, audits, financial restructuring, and compliance.' },
-  { num: '04', name: 'Legal & Compliance', desc: 'For firms specialising in regulatory guidance, contract management, and risk.' },
-  { num: '05', name: 'Operations & Supply Chain', desc: 'For firms optimising processes, procurement, and logistics networks.' },
-  { num: '06', name: 'Strategy & Management', desc: 'For generalist strategy consultancies and management advisors.' },
-  { num: '07', name: 'Cybersecurity', desc: 'For firms focused on security audits, incident response, and risk assessment.' },
-  { num: '08', name: 'ESG & Sustainability', desc: 'For firms advising on environmental, social, and governance reporting and strategy.' },
-]
+  {
+    num: "01",
+    name: "IT & Digital Transformation",
+    desc: "For firms advising on technology adoption, infrastructure, and digital strategy.",
+  },
+  {
+    num: "02",
+    name: "HR & Talent Consulting",
+    desc: "For firms handling workforce planning, recruitment, and organisational development.",
+  },
+  {
+    num: "03",
+    name: "Finance & Accounting",
+    desc: "For firms supporting CFOs, audits, financial restructuring, and compliance.",
+  },
+  {
+    num: "04",
+    name: "Legal & Compliance",
+    desc: "For firms specialising in regulatory guidance, contract management, and risk.",
+  },
+  {
+    num: "05",
+    name: "Operations & Supply Chain",
+    desc: "For firms optimising processes, procurement, and logistics networks.",
+  },
+  {
+    num: "06",
+    name: "Strategy & Management",
+    desc: "For generalist strategy consultancies and management advisors.",
+  },
+  {
+    num: "07",
+    name: "Cybersecurity",
+    desc: "For firms focused on security audits, incident response, and risk assessment.",
+  },
+  {
+    num: "08",
+    name: "ESG & Sustainability",
+    desc: "For firms advising on environmental, social, and governance reporting and strategy.",
+  },
+];
 
 export default function Categories() {
   return (
@@ -19,12 +51,14 @@ export default function Categories() {
           <p className={styles.label}>Who it's for</p>
           <div className={styles.headerRow}>
             <h2 className={styles.title}>
-              Built for eight consulting <em className={styles.accent}>specialties.</em>
+              Built for eight consulting{" "}
+              <em className={styles.accent}>specialties.</em>
             </h2>
             <p className={styles.desc}>
-              Leads are categorised by consulting vertical so the prospects
-              you receive actually match your practice area — not just any
-              company with an open budget.
+              Generic lead lists waste your time. LeadInbox filters by
+              consulting vertical, so a Finance & Accounting firm never receives
+              IT transformation leads. You choose your specialty — we do the
+              rest.
             </p>
           </div>
         </div>
@@ -40,5 +74,5 @@ export default function Categories() {
         </div>
       </div>
     </section>
-  )
+  );
 }

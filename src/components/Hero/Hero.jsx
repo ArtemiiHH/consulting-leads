@@ -14,9 +14,9 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
         <h1 className={styles.headline}>
-          Weekly <em className={styles.accent}>list of leads</em>
-          <br />
-          for consulting firms.
+          <span className={styles.line}>50 companies</span>
+          <em className={styles.accent}>ready to hire</em>
+          <span className={styles.line}>a consulting firm.</span>
         </h1>
 
         <p className={styles.subtext}>
