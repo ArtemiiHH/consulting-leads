@@ -59,7 +59,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loadingText {
@@ -75,18 +77,22 @@
   text-align: center;
 }
 
-.backLink {
-  background: none;
-  border: none;
-  font-size: 13px;
-  color: var(--text-muted);
+.backBtn {
+  background: var(--text-primary);
+  color: var(--bg);
+  border: 1px solid var(--text-primary);
+  border-radius: var(--radius-sm);
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  padding: 0;
-  transition: color 0.15s;
+  transition: background 0.15s;
 }
 
-.backLink:hover {
-  color: var(--text-primary);
+.backBtn:hover {
+  background: #2e2518;
 }
 
 @media (max-width: 768px) {

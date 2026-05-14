@@ -21,6 +21,9 @@ export default function PaymentPage({ plan, onBack }) {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
+        <button type="button" className={styles.backBtn} onClick={onBack}>
+          ← Back
+        </button>
         <a href="#" className={styles.logo} onClick={onBack}>
           <em>Lead</em>Inbox
         </a>
@@ -36,9 +39,6 @@ export default function PaymentPage({ plan, onBack }) {
               <p className={styles.loadingText}>Redirecting to checkout…</p>
             </>
           )}
-          <button type="button" className={styles.backLink} onClick={onBack}>
-            ← Back
-          </button>
         </div>
       </main>
     </div>
