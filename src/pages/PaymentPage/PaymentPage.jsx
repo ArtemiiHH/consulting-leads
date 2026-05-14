@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import styles from "./PaymentPage.module.css";
 
 const PAYMENT_LINKS = {
-  Monthly: import.meta.env.VITE_PAYMENT_LINK_MONTHLY,
-  Annual: import.meta.env.VITE_PAYMENT_LINK_ANNUAL,
+  Starter: import.meta.env.VITE_PAYMENT_LINK_ONE,
+  Growth: import.meta.env.VITE_PAYMENT_LINK_TWO,
 };
 
 export default function PaymentPage({ plan, onBack }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const url = PAYMENT_LINKS[plan] ?? PAYMENT_LINKS.Monthly;
+    const url = PAYMENT_LINKS[plan] ?? PAYMENT_LINKS.Starter;
     if (url) {
       window.location.href = url;
     } else {
@@ -36,11 +36,7 @@ export default function PaymentPage({ plan, onBack }) {
               <p className={styles.loadingText}>Redirecting to checkout…</p>
             </>
           )}
-          <button
-            type="button"
-            className={styles.backLink}
-            onClick={onBack}
-          >
+          <button type="button" className={styles.backLink} onClick={onBack}>
             ← Back
           </button>
         </div>

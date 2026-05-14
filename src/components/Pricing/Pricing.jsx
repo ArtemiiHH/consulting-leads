@@ -5,7 +5,8 @@ const plans = [
     name: "Starter",
     price: 79,
     billing: "Billed monthly",
-    summary: "Get started with a steady flow of verified leads. Cancel any time.",
+    summary:
+      "Get started with a steady flow of verified leads. Cancel any time.",
     features: [
       "25 verified leads per week",
       "1 consulting category",
@@ -18,7 +19,8 @@ const plans = [
     name: "Growth",
     price: 149,
     billing: "Billed monthly",
-    summary: "More leads, more categories, and richer data for serious outbound.",
+    summary:
+      "More leads, more categories, and richer data for serious outbound.",
     recommended: true,
     features: [
       "75 verified leads per week",
