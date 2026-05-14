@@ -1,16 +1,9 @@
 import styles from "./ProductOverview.module.css";
 
-const kpis = [
-  { value: "47", label: "Leads this week" },
-  { value: "46", label: "Verified emails", badge: "✓" },
-  { value: "3", label: "Active filters" },
-  { value: "May 9", label: "Last delivery" },
-];
-
 const leads = [
   {
     name: "Sarah Klein",
-    title: "HR Director",
+    title: "Managing Director",
     company: "Northlane Ltd",
     region: "United Kingdom",
     verified: "May 9, 2026",
@@ -18,23 +11,23 @@ const leads = [
   },
   {
     name: "Matteo Rossi",
-    title: "CFO",
+    title: "CEO",
     company: "Ventaro Group",
     region: "Italy",
     verified: "May 9, 2026",
     email: "✓ verified",
   },
   {
-    name: "Elena Costa",
+    name: "Elena Papacosta",
     title: "COO",
     company: "Rivet Works",
-    region: "Spain",
+    region: "Cyprus",
     verified: "May 9, 2026",
     email: "✓ verified",
   },
   {
     name: "James Porter",
-    title: "VP Finance",
+    title: "Operations Manager",
     company: "Crestfield Advisory",
     region: "United Kingdom",
     verified: "May 9, 2026",
@@ -42,7 +35,7 @@ const leads = [
   },
   {
     name: "Nora Lindqvist",
-    title: "Strategy Director",
+    title: "Managing Director",
     company: "Nordvik Partners",
     region: "Sweden",
     verified: "May 9, 2026",
@@ -72,30 +65,9 @@ export default function ProductOverview() {
         </div>
 
         <div className={styles.mockup}>
-          <div className={styles.mockupChrome}>
-            <div className={styles.chromeDots}>
-              <span />
-              <span />
-              <span />
-            </div>
-            <span className={styles.chromeTitle}>
-              LeadInbox · Finance &amp; Accounting · United Kingdom · Week 19,
-              2026
-            </span>
-          </div>
-
-          <div className={styles.kpiStrip}>
-            {kpis.map((k) => (
-              <div key={k.label} className={styles.kpiCard}>
-                <span className={styles.kpiValue}>
-                  {k.badge && (
-                    <span className={styles.kpiBadge}>{k.badge}</span>
-                  )}
-                  {k.value}
-                </span>
-                <span className={styles.kpiLabel}>{k.label}</span>
-              </div>
-            ))}
+          <div className={styles.mockupHeader}>
+            <span className={styles.mockupTitle}>Finance &amp; Accounting · United Kingdom · Week 19, 2026</span>
+            <span className={styles.mockupCount}>47 leads</span>
           </div>
 
           <div className={styles.tableWrap}>
@@ -105,8 +77,6 @@ export default function ProductOverview() {
                   <th>Name</th>
                   <th>Title</th>
                   <th>Company</th>
-                  <th>Region</th>
-                  <th>Verified</th>
                   <th>Email</th>
                 </tr>
               </thead>
@@ -116,8 +86,6 @@ export default function ProductOverview() {
                     <td className={styles.nameCell}>{l.name}</td>
                     <td>{l.title}</td>
                     <td>{l.company}</td>
-                    <td>{l.region}</td>
-                    <td className={styles.dateCell}>{l.verified}</td>
                     <td className={styles.emailCell}>{l.email}</td>
                   </tr>
                 ))}
@@ -126,29 +94,13 @@ export default function ProductOverview() {
           </div>
 
           <div className={styles.mockupFooter}>
-            <span className={styles.footerCount}>Showing 5 of 47 leads</span>
-            <div className={styles.footerRight}>
-              <span className={styles.exportBadge}>CSV</span>
-              <span className={styles.exportBadge}>Excel</span>
-              <a href="#pricing" className={styles.downloadLink}>
-                Download file
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M6 1v7M3 5l3 3 3-3M2 11h8"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
+            <span className={styles.footerCount}>Showing 5 of 47</span>
+            <a href="#pricing" className={styles.downloadLink}>
+              Download file
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M6 1v7M3 5l3 3 3-3M2 11h8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
           </div>
         </div>
 

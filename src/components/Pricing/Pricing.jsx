@@ -1,34 +1,108 @@
+import { useState } from "react";
 import styles from "./Pricing.module.css";
 
-const features = [
-  "50 verified leads per week",
-  "3 consulting categories",
-  "Country + region filter",
-  "CSV + Excel export",
-  "Name, title, company, email",
-  "LinkedIn URL & company size",
-  "Phone & tech stack",
-  "CRM-ready export",
-];
-
-const plans = [
+const monthlyPlans = [
   {
-    name: "Monthly",
-    price: 199,
+    name: "Starter",
+    price: 99,
     billing: "Billed monthly",
-    summary: "Full access, billed month to month. Cancel any time.",
+    summary: "Get started with targeted leads in one niche. Cancel any time.",
+    features: [
+      "25 verified leads/week",
+      "1 consulting category",
+      "Country filter",
+      "CSV export",
+      "Name, title, company, email",
+    ],
   },
   {
-    name: "Annual",
+    name: "Growth",
+    price: 199,
+    billing: "Billed monthly",
+    summary: "Full access across multiple niches. Most popular for solo consultants.",
+    recommended: true,
+    features: [
+      "50 verified leads/week",
+      "3 consulting categories",
+      "Country + region filter",
+      "CSV + Excel export",
+      "Name, title, company, email",
+      "LinkedIn URL & company size",
+      "Phone & tech stack",
+    ],
+  },
+  {
+    name: "Pro",
+    price: 349,
+    billing: "Billed monthly",
+    summary: "Maximum volume for agencies and high-output outbound teams.",
+    features: [
+      "100 verified leads/week",
+      "5 consulting categories",
+      "Country + region + city filter",
+      "CSV + Excel export",
+      "Name, title, company, email",
+      "LinkedIn URL & company size",
+      "Phone & tech stack",
+      "CRM-ready export",
+      "Priority support",
+    ],
+  },
+];
+
+const annualPlans = [
+  {
+    name: "Starter",
+    price: 79,
+    billing: "Billed $948/year — save $240",
+    summary: "Get started with targeted leads in one niche. Cancel any time.",
+    features: [
+      "25 verified leads/week",
+      "1 consulting category",
+      "Country filter",
+      "CSV export",
+      "Name, title, company, email",
+    ],
+  },
+  {
+    name: "Growth",
     price: 159,
     billing: "Billed $1,908/year — save $480",
-    summary:
-      "Same full access at a lower rate. Best value for ongoing outbound.",
+    summary: "Full access across multiple niches. Most popular for solo consultants.",
     recommended: true,
+    features: [
+      "50 verified leads/week",
+      "3 consulting categories",
+      "Country + region filter",
+      "CSV + Excel export",
+      "Name, title, company, email",
+      "LinkedIn URL & company size",
+      "Phone & tech stack",
+    ],
+  },
+  {
+    name: "Pro",
+    price: 279,
+    billing: "Billed $3,348/year — save $840",
+    summary: "Maximum volume for agencies and high-output outbound teams.",
+    features: [
+      "100 verified leads/week",
+      "5 consulting categories",
+      "Country + region + city filter",
+      "CSV + Excel export",
+      "Name, title, company, email",
+      "LinkedIn URL & company size",
+      "Phone & tech stack",
+      "CRM-ready export",
+      "Priority support",
+    ],
   },
 ];
 
 export default function Pricing({ onCheckout }) {
+  const [billing, setBilling] = useState("annual");
+  const plans = billing === "annual" ? annualPlans : monthlyPlans;
+
   return (
     <section id="pricing" className={styles.section}>
       <div className="container">
@@ -47,6 +121,24 @@ export default function Pricing({ onCheckout }) {
           </div>
         </div>
 
+        <div className={styles.toggle}>
+          <button
+            type="button"
+            className={`${styles.toggleBtn} ${billing === "monthly" ? styles.toggleActive : ""}`}
+            onClick={() => setBilling("monthly")}
+          >
+            Monthly
+          </button>
+          <button
+            type="button"
+            className={`${styles.toggleBtn} ${billing === "annual" ? styles.toggleActive : ""}`}
+            onClick={() => setBilling("annual")}
+          >
+            Annual
+            <span className={styles.saveBadge}>Save 20%</span>
+          </button>
+        </div>
+
         <div className={styles.grid}>
           {plans.map((plan) => (
             <div
@@ -54,7 +146,7 @@ export default function Pricing({ onCheckout }) {
               className={`${styles.card} ${plan.recommended ? styles.recommended : ""}`}
             >
               {plan.recommended && (
-                <div className={styles.badge}>Best value</div>
+                <div className={styles.badge}>Most popular</div>
               )}
               <div className={styles.planHeader}>
                 <h3 className={styles.planName}>{plan.name}</h3>
@@ -77,7 +169,7 @@ export default function Pricing({ onCheckout }) {
               </button>
 
               <ul className={styles.featureList}>
-                {features.map((f) => (
+                {plan.features.map((f) => (
                   <li key={f} className={styles.feature}>
                     <span className={styles.check}>✓</span>
                     {f}
