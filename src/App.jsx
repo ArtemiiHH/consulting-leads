@@ -2,7 +2,6 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import ProductOverview from "./components/ProductOverview/ProductOverview";
-import HowItWorks from "./components/HowItWorks/HowItWorks";
 import Categories from "./components/Categories/Categories";
 import Pricing from "./components/Pricing/Pricing";
 import FAQ from "./components/FAQ/FAQ";
@@ -70,7 +69,6 @@ export default function App() {
         <Hero />
         <ProductOverview />
         <Pricing onCheckout={handleCheckout} />
-        <HowItWorks />
         <Categories />
         <FAQ />
         <FinalCTA onCheckout={handleCheckout} />
