@@ -13,7 +13,6 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-
         <h1 className={styles.headline}>
           Weekly <em className={styles.accent}>list of leads</em>
           <br />
@@ -21,36 +20,20 @@ export default function Hero() {
         </h1>
 
         <p className={styles.subtext}>
-          50 hand-picked, high quality - consulting leads every
-          Monday.
+          Every Monday, get 50 verified companies actively seeking consulting
+          services — filtered for your company's niche.
         </p>
 
         <div className={styles.actions}>
           <a href="#pricing" className={styles.primaryBtn}>
-            Request Access
-          </a>
-          <a href="#how-it-works" className={styles.secondaryBtn}>
-            See how it works
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M1 7h12M8 3l5 4-5 4"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            Get This Week's Leads
           </a>
         </div>
 
         <div className={styles.trustStrip}>
-          <span className={styles.trustLabel}>Built for</span>
+          <span className={styles.trustLabel}>
+            Leads for every consulting specialty
+          </span>
           <div className={styles.tags}>
             {trustTags.map((tag) => (
               <span key={tag} className={styles.tag}>

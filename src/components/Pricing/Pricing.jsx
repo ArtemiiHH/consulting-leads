@@ -1,31 +1,32 @@
-import styles from './Pricing.module.css'
+import styles from "./Pricing.module.css";
 
 const features = [
-  '50 verified leads per week',
-  '3 consulting categories',
-  'Country + region filter',
-  'CSV + Excel export',
-  'Name, title, company, email',
-  'LinkedIn URL & company size',
-  'Phone & tech stack',
-  'CRM-ready export',
-]
+  "50 verified leads per week",
+  "3 consulting categories",
+  "Country + region filter",
+  "CSV + Excel export",
+  "Name, title, company, email",
+  "LinkedIn URL & company size",
+  "Phone & tech stack",
+  "CRM-ready export",
+];
 
 const plans = [
   {
-    name: 'Monthly',
+    name: "Monthly",
     price: 199,
-    billing: 'Billed monthly',
-    summary: 'Full access, billed month to month. Cancel any time.',
+    billing: "Billed monthly",
+    summary: "Full access, billed month to month. Cancel any time.",
   },
   {
-    name: 'Annual',
+    name: "Annual",
     price: 159,
-    billing: 'Billed $1,908/year — save $480',
-    summary: 'Same full access at a lower rate. Best value for ongoing outbound.',
+    billing: "Billed $1,908/year — save $480",
+    summary:
+      "Same full access at a lower rate. Best value for ongoing outbound.",
     recommended: true,
   },
-]
+];
 
 export default function Pricing({ onCheckout }) {
   return (
@@ -35,8 +36,9 @@ export default function Pricing({ onCheckout }) {
           <p className={styles.label}>Pricing</p>
           <div className={styles.titleRow}>
             <h2 className={styles.title}>
-              Simple pricing.<br />
-              <em className={styles.accent}>No surprises.</em>
+              One lead that converts — pays
+              <br />
+              <em className={styles.accent}>for a year of LeadInbox.</em>
             </h2>
             <p className={styles.subtitle}>
               All plans include weekly delivery, email verification, and
@@ -46,10 +48,10 @@ export default function Pricing({ onCheckout }) {
         </div>
 
         <div className={styles.grid}>
-          {plans.map(plan => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`${styles.card} ${plan.recommended ? styles.recommended : ''}`}
+              className={`${styles.card} ${plan.recommended ? styles.recommended : ""}`}
             >
               {plan.recommended && (
                 <div className={styles.badge}>Best value</div>
@@ -75,7 +77,7 @@ export default function Pricing({ onCheckout }) {
               </button>
 
               <ul className={styles.featureList}>
-                {features.map(f => (
+                {features.map((f) => (
                   <li key={f} className={styles.feature}>
                     <span className={styles.check}>✓</span>
                     {f}
@@ -85,7 +87,12 @@ export default function Pricing({ onCheckout }) {
             </div>
           ))}
         </div>
+
+        <p className={styles.footnote}>
+          At $199/month, that&apos;s $4 per lead.{" "}
+          <strong>One signed client covers your subscription for years.</strong>
+        </p>
       </div>
     </section>
-  )
+  );
 }

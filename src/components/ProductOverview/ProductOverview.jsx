@@ -59,15 +59,14 @@ export default function ProductOverview() {
           <div className={styles.headerRow}>
             <div className={styles.headerLeft}>
               <h2 className={styles.title}>
-                Your weekly lead delivery,
+                Every Monday,
                 <br />
-                <em className={styles.accent}>ready for outreach.</em>
+                <em className={styles.accent}>your leads are waiting.</em>
               </h2>
             </div>
             <p className={styles.desc}>
-              Every Monday, you receive a clean file of verified companies and
-              decision-makers matching your exact preferences — no manual
-              searching, no unverified contacts.
+              You get a spreadsheet with 50 companies that match your consulting
+              specialty, region, and company size.
             </p>
           </div>
         </div>
