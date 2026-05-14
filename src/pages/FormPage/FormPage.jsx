@@ -13,13 +13,10 @@ const CATEGORIES = [
 ];
 
 const REGIONS = [
-  "North America",
-  "Europe",
+  "United States",
+  "Canada",
   "United Kingdom",
-  "Asia-Pacific",
-  "Latin America",
-  "Middle East & Africa",
-  "Global",
+  "European Union",
 ];
 
 const COMPANY_SIZES = [
