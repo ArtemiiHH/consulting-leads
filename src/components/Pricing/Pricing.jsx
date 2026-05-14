@@ -29,7 +29,6 @@ const plans = [
       "CSV + Excel export",
       "Name, title, company, email",
       "LinkedIn URL & company size",
-      "Phone & tech stack",
       "CRM-ready export",
     ],
   },
