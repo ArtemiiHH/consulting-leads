@@ -37,7 +37,7 @@ export default function ThankYouPage({ data, onBack }) {
           </h1>
           <p className={styles.body}>
             We've received your preferences and will send your first verified
-            lead file to <strong>{data.email}</strong> by the end of the week.
+            lead file to <strong>{data.email}</strong> by the start of the week.
           </p>
 
           <div className={styles.summary}>
