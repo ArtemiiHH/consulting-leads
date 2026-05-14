@@ -29,22 +29,20 @@ export default function PaymentPage({ plan, onBack }) {
       <main className={styles.main}>
         <div className={styles.card}>
           {error ? (
-            <>
-              <p className={styles.error}>{error}</p>
-              <button
-                type="button"
-                className={styles.backLink}
-                onClick={onBack}
-              >
-                ← Back
-              </button>
-            </>
+            <p className={styles.error}>{error}</p>
           ) : (
             <>
               <div className={styles.spinner} />
               <p className={styles.loadingText}>Redirecting to checkout…</p>
             </>
           )}
+          <button
+            type="button"
+            className={styles.backLink}
+            onClick={onBack}
+          >
+            ← Back
+          </button>
         </div>
       </main>
     </div>
