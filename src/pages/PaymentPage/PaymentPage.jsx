@@ -26,10 +26,13 @@ export default function PaymentPage({ plan, onBack }) {
         </a>
       </header>
 
-      <main className={styles.main}>
+      <nav className={styles.nav}>
         <button type="button" className={styles.backBtn} onClick={onBack}>
           ← Back
         </button>
+      </nav>
+
+      <main className={styles.main}>
         <div className={styles.card}>
           {error ? (
             <p className={styles.error}>{error}</p>

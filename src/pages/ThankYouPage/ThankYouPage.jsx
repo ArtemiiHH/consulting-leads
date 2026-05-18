@@ -1,6 +1,11 @@
 import styles from "./ThankYouPage.module.css";
 
 export default function ThankYouPage({ data, onBack }) {
+  const isGrowth = data.plan?.toLowerCase() === "growth";
+  const categoryList = isGrowth
+    ? data.categories.split(", ")
+    : [data.category];
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -49,10 +54,14 @@ export default function ThankYouPage({ data, onBack }) {
                   <span className={styles.summaryValue}>{data.plan}</span>
                 </li>
               )}
-              <li className={styles.summaryItem}>
-                <span className={styles.summaryLabel}>Consulting category</span>
-                <span className={styles.summaryValue}>{data.category}</span>
-              </li>
+              {categoryList.map((cat, i) => (
+                <li key={i} className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>
+                    {isGrowth ? `Category ${i + 1}` : "Consulting category"}
+                  </span>
+                  <span className={styles.summaryValue}>{cat}</span>
+                </li>
+              ))}
               <li className={styles.summaryItem}>
                 <span className={styles.summaryLabel}>Target region</span>
                 <span className={styles.summaryValue}>{data.region}</span>

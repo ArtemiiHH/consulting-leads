@@ -34,6 +34,11 @@
   color: var(--accent);
 }
 
+.nav {
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -100,6 +105,10 @@
 @media (max-width: 768px) {
   .header {
     padding: 0 20px;
+  }
+
+  .nav {
+    padding: 12px 20px;
   }
 
   .main {
