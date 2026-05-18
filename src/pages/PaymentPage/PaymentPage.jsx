@@ -22,7 +22,9 @@ export default function PaymentPage({ plan, onBack }) {
     <div className={styles.page}>
       <header className={styles.header}>
         <a href="#" className={styles.logo} onClick={onBack}>
-          <em>Lead</em>Inbox
+          Get
+          <em>Consulting</em>
+          Leads
         </a>
       </header>
 

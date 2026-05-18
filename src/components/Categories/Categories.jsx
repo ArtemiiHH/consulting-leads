@@ -34,7 +34,7 @@ export default function Categories() {
           </div>
 
           <div className={styles.col}>
-            <p className={`${styles.colLabel} ${styles.colLabelGreen}`}>LeadInbox helps…</p>
+            <p className={`${styles.colLabel} ${styles.colLabelGreen}`}>GetConsultingLeads helps…</p>
             <ul className={styles.list}>
               {helps.map((h) => (
                 <li key={h} className={`${styles.item} ${styles.itemHelp}`}>

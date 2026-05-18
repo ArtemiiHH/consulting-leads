@@ -15,7 +15,9 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.logo}>
-          <em>Lead</em>Inbox
+          Get
+          <em>Consulting</em>
+          Leads
         </a>
 
         <nav className={styles.nav}>

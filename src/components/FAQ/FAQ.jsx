@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "Is there a dashboard or web portal?",
-    a: "Not in the current version. LeadInbox is intentionally simple at this stage: set preferences once by email after signup, then receive your leads every Monday. A self-service web portal is planned for a future release.",
+    a: "Not in the current version. GetConsultingLeads is intentionally simple at this stage: set preferences once by email after signup, then receive your leads every Monday. A self-service web portal is planned for a future release.",
   },
   {
     q: "Which regions are supported at launch?",

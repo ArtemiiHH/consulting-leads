@@ -12,7 +12,7 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
           <a href="#" className={styles.logo}>
-            LeadInbox
+            GetConsultingLeads
           </a>
           <p className={styles.tagline}>
             Weekly verified lead delivery
@@ -42,7 +42,7 @@ export default function Footer() {
 
       <div className={`container ${styles.bottom}`}>
         <p className={styles.copy}>
-          © {new Date().getFullYear()} LeadInbox. All rights reserved.
+          © {new Date().getFullYear()} GetConsultingLeads. All rights reserved.
         </p>
         <p className={styles.bottomLinks}>
           <a href="#">Privacy</a>

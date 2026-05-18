@@ -2,15 +2,15 @@ import styles from "./ThankYouPage.module.css";
 
 export default function ThankYouPage({ data, onBack }) {
   const isGrowth = data.plan?.toLowerCase() === "growth";
-  const categoryList = isGrowth
-    ? data.categories.split(", ")
-    : [data.category];
+  const categoryList = isGrowth ? data.categories.split(", ") : [data.category];
 
   return (
     <div className={styles.page}>
       <header className={styles.header}>
         <a href="#" className={styles.logo} onClick={onBack}>
-          <em>Lead</em>Inbox
+          Get
+          <em>Consulting</em>
+          Leads
         </a>
       </header>
 

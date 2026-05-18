@@ -44,7 +44,7 @@ export default function Pricing({ onCheckout }) {
             <h2 className={styles.title}>
               One lead that converts — pays
               <br />
-              <em className={styles.accent}>for a year of LeadInbox.</em>
+              <em className={styles.accent}>for a year of GetConsultingLeads</em>
             </h2>
             <p className={styles.subtitle}>
               All plans include weekly delivery, email verification, and
