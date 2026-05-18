@@ -93,11 +93,6 @@ export default function Pricing({ onCheckout }) {
             </div>
           ))}
         </div>
-
-        <p className={styles.footnote}>
-          At $149/month, that&apos;s $4 per lead.{" "}
-          <strong>One signed client covers your subscription for years.</strong>
-        </p>
       </div>
     </section>
   );
