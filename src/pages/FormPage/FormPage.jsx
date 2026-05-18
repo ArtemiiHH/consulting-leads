@@ -2,22 +2,15 @@ import { useState } from "react";
 import styles from "./FormPage.module.css";
 
 const CATEGORIES = [
-  "Management Consulting",
   "IT & Technology Consulting",
-  "HR & People Consulting",
   "Financial & Accounting Consulting",
-  "Marketing & Growth Consulting",
-  "Operations & Supply Chain Consulting",
+  "HR & People Consulting",
   "Legal & Compliance Consulting",
-  "Environmental & Sustainability Consulting",
+  "Strategy & Management Consulting",
+  "Cybersecurity",
 ];
 
-const REGIONS = [
-  "United States",
-  "Canada",
-  "United Kingdom",
-  "European Union",
-];
+const REGIONS = ["United States", "Canada", "United Kingdom", "European Union"];
 
 const COMPANY_SIZES = [
   "Startup (1–50 employees)",
@@ -26,8 +19,6 @@ const COMPANY_SIZES = [
   "Enterprise (1,001–5,000 employees)",
   "Large Enterprise (5,000+ employees)",
 ];
-
-const GROWTH_REGIONS = [...REGIONS, "Australia & New Zealand", "Asia Pacific"];
 
 export default function FormPage({ plan, onSubmit, onBack }) {
   const isGrowth = plan?.toLowerCase() === "growth";
@@ -67,7 +58,10 @@ export default function FormPage({ plan, onSubmit, onBack }) {
     setForm((prev) => {
       const already = prev.categories.includes(category);
       if (already) {
-        return { ...prev, categories: prev.categories.filter((c) => c !== category) };
+        return {
+          ...prev,
+          categories: prev.categories.filter((c) => c !== category),
+        };
       }
       if (prev.categories.length >= 3) return prev;
       return { ...prev, categories: [...prev.categories, category] };
@@ -82,8 +76,20 @@ export default function FormPage({ plan, onSubmit, onBack }) {
       return;
     }
     const payload = isGrowth
-      ? { plan, categories: form.categories.join(", "), region: form.region, companySize: form.companySize, email: form.email }
-      : { plan, category: form.category, region: form.region, companySize: form.companySize, email: form.email };
+      ? {
+          plan,
+          categories: form.categories.join(", "),
+          region: form.region,
+          companySize: form.companySize,
+          email: form.email,
+        }
+      : {
+          plan,
+          category: form.category,
+          region: form.region,
+          companySize: form.companySize,
+          email: form.email,
+        };
     await fetch("https://formspree.io/f/mbdwewlb", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -92,7 +98,7 @@ export default function FormPage({ plan, onSubmit, onBack }) {
     onSubmit(payload);
   }
 
-  const regionOptions = isGrowth ? GROWTH_REGIONS : REGIONS;
+  const regionOptions = REGIONS;
 
   return (
     <div className={styles.page}>

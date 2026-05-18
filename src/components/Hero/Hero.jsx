@@ -2,8 +2,8 @@ import styles from "./Hero.module.css";
 
 const trustTags = [
   "IT & Technology",
-  "HR & Talent",
   "Finance & Accounting",
+  "HR & Talent",
   "Legal & Compliance",
   "Strategy",
   "Cybersecurity",
