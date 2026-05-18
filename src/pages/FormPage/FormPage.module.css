@@ -160,6 +160,51 @@
   background: #2e2518;
 }
 
+.labelHint {
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+
+.checkboxGroupError {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.4;
+}
+
+.checkboxDisabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 0 20px;

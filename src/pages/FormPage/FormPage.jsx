@@ -27,9 +27,14 @@ const COMPANY_SIZES = [
   "Large Enterprise (5,000+ employees)",
 ];
 
+const GROWTH_REGIONS = [...REGIONS, "Australia & New Zealand", "Asia Pacific"];
+
 export default function FormPage({ plan, onSubmit, onBack }) {
+  const isGrowth = plan?.toLowerCase() === "growth";
+
   const [form, setForm] = useState({
     category: "",
+    categories: [],
     region: "",
     companySize: "",
     email: "",
@@ -38,7 +43,12 @@ export default function FormPage({ plan, onSubmit, onBack }) {
 
   function validate() {
     const e = {};
-    if (!form.category) e.category = "Please select a consulting category.";
+    if (isGrowth) {
+      if (form.categories.length !== 3)
+        e.categories = "Please select exactly 3 consulting categories.";
+    } else {
+      if (!form.category) e.category = "Please select a consulting category.";
+    }
     if (!form.region) e.region = "Please select a target region.";
     if (!form.companySize) e.companySize = "Please select a company size.";
     if (!form.email) e.email = "Email is required.";
@@ -52,6 +62,18 @@ export default function FormPage({ plan, onSubmit, onBack }) {
     setErrors((prev) => ({ ...prev, [e.target.name]: undefined }));
   }
 
+  function handleCheckbox(category) {
+    setErrors((prev) => ({ ...prev, categories: undefined }));
+    setForm((prev) => {
+      const already = prev.categories.includes(category);
+      if (already) {
+        return { ...prev, categories: prev.categories.filter((c) => c !== category) };
+      }
+      if (prev.categories.length >= 3) return prev;
+      return { ...prev, categories: [...prev.categories, category] };
+    });
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
     const e2 = validate();
@@ -59,13 +81,18 @@ export default function FormPage({ plan, onSubmit, onBack }) {
       setErrors(e2);
       return;
     }
+    const payload = isGrowth
+      ? { plan, categories: form.categories.join(", "), region: form.region, companySize: form.companySize, email: form.email }
+      : { plan, category: form.category, region: form.region, companySize: form.companySize, email: form.email };
     await fetch("https://formspree.io/f/mbdwewlb", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ plan, ...form }),
+      body: JSON.stringify(payload),
     });
-    onSubmit({ plan, ...form });
+    onSubmit(payload);
   }
+
+  const regionOptions = isGrowth ? GROWTH_REGIONS : REGIONS;
 
   return (
     <div className={styles.page}>
@@ -89,30 +116,67 @@ export default function FormPage({ plan, onSubmit, onBack }) {
           </p>
 
           <form className={styles.form} onSubmit={handleSubmit} noValidate>
-            <div className={styles.field}>
-              <label htmlFor="category" className={styles.label}>
-                Consulting category
-              </label>
-              <select
-                id="category"
-                name="category"
-                className={`${styles.select} ${errors.category ? styles.inputError : ""}`}
-                value={form.category}
-                onChange={handleChange}
-              >
-                <option value="" disabled>
-                  Select a category…
-                </option>
-                {CATEGORIES.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
+            {isGrowth ? (
+              <div className={styles.field}>
+                <label className={styles.label}>
+                  Consulting categories{" "}
+                  <span className={styles.labelHint}>
+                    — choose exactly 3 ({form.categories.length}/3)
+                  </span>
+                </label>
+                <div
+                  className={`${styles.checkboxGroup} ${errors.categories ? styles.checkboxGroupError : ""}`}
+                >
+                  {CATEGORIES.map((c) => {
+                    const checked = form.categories.includes(c);
+                    const disabled = !checked && form.categories.length >= 3;
+                    return (
+                      <label
+                        key={c}
+                        className={`${styles.checkboxLabel} ${disabled ? styles.checkboxDisabled : ""}`}
+                      >
+                        <input
+                          type="checkbox"
+                          className={styles.checkbox}
+                          checked={checked}
+                          disabled={disabled}
+                          onChange={() => handleCheckbox(c)}
+                        />
+                        {c}
+                      </label>
+                    );
+                  })}
+                </div>
+                {errors.categories && (
+                  <span className={styles.error}>{errors.categories}</span>
+                )}
+              </div>
+            ) : (
+              <div className={styles.field}>
+                <label htmlFor="category" className={styles.label}>
+                  Consulting category
+                </label>
+                <select
+                  id="category"
+                  name="category"
+                  className={`${styles.select} ${errors.category ? styles.inputError : ""}`}
+                  value={form.category}
+                  onChange={handleChange}
+                >
+                  <option value="" disabled>
+                    Select a category…
                   </option>
-                ))}
-              </select>
-              {errors.category && (
-                <span className={styles.error}>{errors.category}</span>
-              )}
-            </div>
+                  {CATEGORIES.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+                {errors.category && (
+                  <span className={styles.error}>{errors.category}</span>
+                )}
+              </div>
+            )}
 
             <div className={styles.field}>
               <label htmlFor="region" className={styles.label}>
@@ -128,7 +192,7 @@ export default function FormPage({ plan, onSubmit, onBack }) {
                 <option value="" disabled>
                   Select a region…
                 </option>
-                {REGIONS.map((r) => (
+                {regionOptions.map((r) => (
                   <option key={r} value={r}>
                     {r}
                   </option>

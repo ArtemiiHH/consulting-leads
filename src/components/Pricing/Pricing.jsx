@@ -8,7 +8,7 @@ const plans = [
     summary:
       "Get started with a steady flow of verified leads. Cancel any time.",
     features: [
-      "25 verified leads per week",
+      "50 verified leads per week",
       "1 consulting category",
       "Country filter",
       "CSV export",
@@ -23,7 +23,7 @@ const plans = [
       "More leads, more categories, and richer data for serious outbound.",
     recommended: true,
     features: [
-      "75 verified leads per week",
+      "100 verified leads per week",
       "3 consulting categories",
       "Country + region filter",
       "CSV + Excel export",
@@ -95,7 +95,7 @@ export default function Pricing({ onCheckout }) {
         </div>
 
         <p className={styles.footnote}>
-          At $199/month, that&apos;s $4 per lead.{" "}
+          At $149/month, that&apos;s $4 per lead.{" "}
           <strong>One signed client covers your subscription for years.</strong>
         </p>
       </div>
