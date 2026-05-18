@@ -1,9 +1,8 @@
 import styles from "./Footer.module.css";
 
 const links = {
-  Product: ["How it works", "Pricing", "Categories", "FAQ"],
-  Company: ["About", "Blog", "Contact", "Careers"],
-  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+  Product: ["How it works", "Pricing", "FAQ"],
+  Company: ["Contact"],
 };
 
 export default function Footer() {
@@ -12,7 +11,9 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
           <a href="#" className={styles.logo}>
-            GetConsultingLeads
+            Get
+            <em>Consulting</em>
+            Leads
           </a>
           <p className={styles.tagline}>
             Weekly verified lead delivery

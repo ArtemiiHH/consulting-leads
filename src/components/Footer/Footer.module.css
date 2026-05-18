@@ -18,11 +18,16 @@
 }
 
 .logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 21px;
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.02em;
+}
+
+.logo em {
+  font-family: var(--font-serif);
+  color: var(--accent);
 }
 
 .tagline {
@@ -48,7 +53,7 @@
 }
 
 .footerCta:hover {
-  background: #2E2518;
+  background: #2e2518;
 }
 
 .linkGroup {
