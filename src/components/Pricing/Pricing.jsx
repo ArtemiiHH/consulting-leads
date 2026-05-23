@@ -66,7 +66,7 @@ export default function Pricing({ onCheckout }) {
                 <h3 className={styles.planName}>{plan.name}</h3>
                 <div className={styles.priceBlock}>
                   <div className={styles.priceRow}>
-                    <span className={styles.price}>${plan.price}</span>
+                    <span className={styles.price}>€{plan.price}</span>
                     <span className={styles.period}>/mo</span>
                   </div>
                   <p className={styles.billingNote}>{plan.billing}</p>
