@@ -50,7 +50,9 @@ export default function Footer() {
           <span className={styles.sep}>·</span>
           <a href="#">Terms</a>
           <span className={styles.sep}>·</span>
-          <a href="mailto:hello@leadinbox.io">hello@leadinbox.io</a>
+          <a href="mailto:getconsultingleads@gmail.com">
+            getconsultingleads@gmail.com
+          </a>
         </p>
       </div>
     </footer>

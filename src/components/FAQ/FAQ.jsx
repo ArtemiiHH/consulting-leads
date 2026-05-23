@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How does delivery work?",
-    a: "Each Monday, you receive an email from delivery@leadinbox.io containing a secure, signed download link to your lead file. Links are time-limited for security. There are no email attachments — just a clean link to your file.",
+    a: "Each Monday, you receive an email from getconsultingleads@gmail.com containing a secure, signed download link to your lead file. Links are time-limited for security. There are no email attachments — just a clean link to your file.",
   },
   {
     q: "Is there a dashboard or web portal?",
@@ -46,8 +46,11 @@ export default function FAQ() {
             </h2>
             <p className={styles.hint}>
               More questions? Email us at{" "}
-              <a href="mailto:hello@leadinbox.io" className={styles.emailLink}>
-                hello@leadinbox.io
+              <a
+                href="mailto:getconsultingleads@gmail.com"
+                className={styles.emailLink}
+              >
+                getconsultingleads@gmail.com
               </a>
             </p>
           </div>

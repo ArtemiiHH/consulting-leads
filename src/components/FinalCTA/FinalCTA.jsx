@@ -22,7 +22,10 @@ export default function FinalCTA({ onCheckout }) {
           >
             Find My Next Clients
           </button>
-          <a href="mailto:hello@leadinbox.io" className={styles.secondaryBtn}>
+          <a
+            href="mailto:getconsultingleads@gmail.com"
+            className={styles.secondaryBtn}
+          >
             Talk to us first
           </a>
         </div>
