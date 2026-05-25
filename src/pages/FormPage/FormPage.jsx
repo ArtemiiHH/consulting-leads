@@ -10,7 +10,13 @@ const CATEGORIES = [
   "Cybersecurity",
 ];
 
-const REGIONS = ["United States", "Canada", "United Kingdom", "European Union"];
+const REGIONS = [
+  "Cyprus",
+  "European Union",
+  "United Kingdom",
+  "United States",
+  "Canada",
+];
 
 const COMPANY_SIZES = [
   "Startup (1–50 employees)",

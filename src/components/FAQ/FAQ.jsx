@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Which regions are supported at launch?",
-    a: "United States, Canada, United Kingdom, and the European Union. Additional regions will be added based on subscriber demand. Contact us if your target region is not listed.",
+    a: "Cyprus, European Union, United Kingdom, United States and Canada. Additional regions will be added based on subscriber demand. Contact us if your target region is not listed.",
   },
   {
     q: "Can I update my preferences after signing up?",

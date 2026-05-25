@@ -9,7 +9,7 @@ const stops = [
 ];
 
 const helps = [
-  "Delivers 25–75 verified leads to your inbox every week",
+  "Delivers 50-100 verified leads to your inbox every week",
   "Filters by your consulting vertical — every lead fits your niche",
   "Includes name, title, company, LinkedIn, phone & tech stack",
   "Exports directly to your CRM in one click",
@@ -34,7 +34,9 @@ export default function Categories() {
           </div>
 
           <div className={styles.col}>
-            <p className={`${styles.colLabel} ${styles.colLabelGreen}`}>GetConsultingLeads helps…</p>
+            <p className={`${styles.colLabel} ${styles.colLabelGreen}`}>
+              GetConsultingLeads helps…
+            </p>
             <ul className={styles.list}>
               {helps.map((h) => (
                 <li key={h} className={`${styles.item} ${styles.itemHelp}`}>
