@@ -2,7 +2,7 @@
 
 **Lead Inbox** is a B2B SaaS platform that solves the lead generation problem for business consulting agencies. Instead of spending hours manually searching for prospects, consulting firms subscribe and receive verified, niche-specific leads delivered directly to their inbox every week.
 
-![Lead Inbox Homepage](images/homepage.png)
+![Lead Inbox Homepage](https://github.com/user-attachments/assets/fd7347be-aa16-4adc-9b9d-f73d425f7080)
 
 ---
 
@@ -31,7 +31,7 @@ Lead Inbox sources leads from third-party data providers, filters them by consul
 2. They subscribe via a monthly payment.
 3. Every week, verified leads matching their category are delivered straight to their inbox — no login required.
 
-![Onboarding Form](images/onboarding-form.png)
+![Onboarding Form](https://github.com/user-attachments/assets/2b3b9ebf-9ded-40bd-83a1-6efae949d0fe)
 
 ---
 
